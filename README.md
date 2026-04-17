@@ -4,7 +4,7 @@ This repository contains the instructions, requirements, and starter code for St
 
 ---
 
-## 📚 Table of Content
+## 📚 Table of Contents
 
 - [Your Task](#your-task)
 - [Requirements](#requirements---your-catalog-website-should)
