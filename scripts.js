@@ -1,68 +1,65 @@
-/**
- * Data Catalog Project Starter Code - SEA Stage 2
- *
- * This file is where you should be doing most of your work. You should
- * also make changes to the HTML and CSS files, but we want you to prioritize
- * demonstrating your understanding of data structures, and you'll do that
- * with the JavaScript code you write in this file.
- *
- * The comments in this file are only to help you learn how the starter code
- * works. The instructions for the project are in the README. That said, here
- * are the three things you should do first to learn about the starter code:
- * - 1 - Change something small in index.html or style.css, then reload your
- *    browser and make sure you can see that change.
- * - 2 - On your browser, right click anywhere on the page and select
- *    "Inspect" to open the browser developer tools. Then, go to the "console"
- *    tab in the new window that opened up. This console is where you will see
- *    JavaScript errors and logs, which is extremely helpful for debugging.
- *    (These instructions assume you're using Chrome, opening developer tools
- *    may be different on other browsers. We suggest using Chrome.)
- * - 3 - Add another string to the titles array a few lines down. Reload your
- *    browser and observe what happens. You should see a fourth "card" appear
- *    with the string you added to the array, but a broken image.
- *
- */
-
 import {memes} from "./data.js"
 
+console.log(memes[0]);
 
-console.log(memes[0])
 
 
-function showCards() {
-  const cardContainer = document.querySelector(".items-container");
-  cardContainer.innerHTML = "";
-  const templateCard = document.querySelector(".cards");
-  console.log(templateCard) 
-  for (let i = 0; i < memes.length; i++) {
 
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
-    // 
-    
-    let meme = memes[i];
+// create a card 
+function createCard(meme){
+  const card = document.createElement("article")
+  card.className = "card";
 
-    const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, meme.name, meme.image); // Edit title and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
+  const image = document.createElement("img");
+  image.src = meme.image;
+  image.alt = `${meme.name} image`
+
+
+  const body = document.createElement("div");
+  body.className = "cardBody"
+
+  const title = document.createElement("h3");
+  title.className = "cardTitle"
+  title.textContent = meme.name
+
+  const info = document.createElement("p");
+  info.className = "info"
+  info.textContent = `${meme.year} | ${meme.platform} | ${meme.category}`;
+
+  const desc = document.createElement('p');
+  desc.className = "desc";
+  desc.textContent = meme.description;
+
+  const liveLink = document.createElement("a");  
+  liveLink.href = meme.link
+  liveLink.target = "_blank"
+  liveLink.textContent = "Open Source Link"
+
+
+  body.append(title, info, desc, liveLink)
+  card.append(image, body);
+
+  return card
+
+}
+
+
+function renderMemeCard(items){
+  const grid = document.querySelector(".catalog-grid")
+  const resultCount = document.getElementById("resultCount")
+  
+  
+  if(!grid) return;
+
+  grid.innerHTML = "";
+
+  items.map((meme, key=meme.id)=>{
+    grid.appendChild(createCard(meme))
+  })
+
+  if(resultCount){
+    resultCount.textContent = `${items.length} no of memes`
   }
 }
 
-function editCardContent(card, newTitle, newImageURL) {
-  card.style.display = "block";
-
-  const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newTitle;
-
-  const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
-
-  // You can use console.log to help you debug!
-  // View the output by right clicking on your website,
-  // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
-}
-
-// This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+renderMemeCard(memes);

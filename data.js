@@ -5,8 +5,7 @@ export const memes = [
     year: 2014,
     platform: "Facebook",
     type: "Challenge",
-    category: "Social Cause",
-    popularity: 95,
+    category: "Social",
     image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Ice_Bucket_Challenge.jpg",
     link: "https://www.youtube.com/results?search_query=ice+bucket+challenge",
     description: "ALS awareness campaign where people dumped ice water on themselves."
@@ -18,7 +17,6 @@ export const memes = [
     platform: "Instagram",
     type: "Image Meme",
     category: "Humor",
-    popularity: 90,
     image: "https://upload.wikimedia.org/wikipedia/en/1/1a/Distracted_Boyfriend.jpg",
     link: "https://knowyourmeme.com/memes/distracted-boyfriend",
     description: "Stock photo turned into a viral meme about distraction."
@@ -30,7 +28,6 @@ export const memes = [
     platform: "YouTube",
     type: "Trend",
     category: "Dance",
-    popularity: 92,
     image: "https://upload.wikimedia.org/wikipedia/en/5/5f/Harlem_Shake_meme.jpg",
     link: "https://www.youtube.com/results?search_query=harlem+shake",
     description: "Sudden chaotic dance switch after beat drop."
@@ -42,7 +39,6 @@ export const memes = [
     platform: "YouTube",
     type: "Music Meme",
     category: "Dance",
-    popularity: 100,
     image: "https://upload.wikimedia.org/wikipedia/en/a/ad/Gangnam_Style_Official_Cover.png",
     link: "https://www.youtube.com/watch?v=9bZkp7q19f0",
     description: "Global viral K-pop hit by PSY."
@@ -54,7 +50,6 @@ export const memes = [
     platform: "Twitter",
     type: "Image Meme",
     category: "Humor",
-    popularity: 88,
     image: "https://upload.wikimedia.org/wikipedia/en/9/9a/Woman_yelling_at_cat_meme.jpg",
     link: "https://knowyourmeme.com/memes/woman-yelling-at-a-cat",
     description: "Split image meme showing argument vs confused cat."
@@ -66,7 +61,6 @@ export const memes = [
     platform: "Snapchat",
     type: "Catchphrase",
     category: "Humor",
-    popularity: 85,
     image: "https://upload.wikimedia.org/wikipedia/en/0/0f/Damn_Daniel.jpg",
     link: "https://www.youtube.com/results?search_query=damn+daniel",
     description: "Viral phrase praising outfits."
@@ -77,8 +71,7 @@ export const memes = [
     year: 2019,
     platform: "Instagram",
     type: "Challenge",
-    category: "Skill",
-    popularity: 87,
+    category: "Social",
     image: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Bottle_cap_challenge.jpg",
     link: "https://www.youtube.com/results?search_query=bottle+cap+challenge",
     description: "Kick bottle cap off without knocking bottle."
@@ -90,7 +83,6 @@ export const memes = [
     platform: "Facebook",
     type: "Image Meme",
     category: "Humor",
-    popularity: 84,
     image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Hide_the_Pain_Harold.jpg",
     link: "https://knowyourmeme.com/memes/hide-the-pain-harold",
     description: "Stock photo man with forced smile."
@@ -102,7 +94,6 @@ export const memes = [
     platform: "Twitter",
     type: "Image Meme",
     category: "Humor",
-    popularity: 83,
     image: "https://upload.wikimedia.org/wikipedia/en/3/3f/Roll_Safe_meme.jpg",
     link: "https://knowyourmeme.com/memes/roll-safe",
     description: "Tapping head meme implying clever logic."
@@ -114,7 +105,6 @@ export const memes = [
     platform: "Reddit",
     type: "Animal Meme",
     category: "Humor",
-    popularity: 91,
     image: "https://upload.wikimedia.org/wikipedia/en/5/5f/Grumpy_Cat.jpg",
     link: "https://knowyourmeme.com/memes/grumpy-cat",
     description: "Famous cat with permanently grumpy face."
@@ -125,8 +115,7 @@ export const memes = [
     year: 2007,
     platform: "YouTube",
     type: "Viral Video",
-    category: "Family",
-    popularity: 93,
+    category: "Social",
     image: "https://upload.wikimedia.org/wikipedia/en/1/1c/Charlie_bit_me.jpg",
     link: "https://www.youtube.com/watch?v=_OBlgSz8sSM",
     description: "Toddler bites brother’s finger."
@@ -137,8 +126,7 @@ export const memes = [
     year: 2016,
     platform: "TV/YouTube",
     type: "Catchphrase",
-    category: "Drama",
-    popularity: 86,
+    category: "Social",
     image: "https://upload.wikimedia.org/wikipedia/en/4/4e/Cash_me_outside.jpg",
     link: "https://www.youtube.com/results?search_query=cash+me+outside",
     description: "Catchphrase from Dr. Phil episode."
@@ -150,7 +138,6 @@ export const memes = [
     platform: "Twitter",
     type: "Anime Meme",
     category: "Humor",
-    popularity: 82,
     image: "https://upload.wikimedia.org/wikipedia/en/f/fd/Is_this_a_pigeon.jpg",
     link: "https://knowyourmeme.com/memes/is-this-a-pigeon",
     description: "Misidentifying objects humorously."
@@ -162,7 +149,6 @@ export const memes = [
     platform: "TikTok",
     type: "Gaming Meme",
     category: "Gaming",
-    popularity: 89,
     image: "https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg",
     link: "https://www.youtube.com/results?search_query=among+us+sus",
     description: "Suspicious behavior meme from Among Us."
@@ -174,7 +160,6 @@ export const memes = [
     platform: "TikTok",
     type: "Phrase",
     category: "Social",
-    popularity: 88,
     image: "https://upload.wikimedia.org/wikipedia/commons/9/9f/OK_Boomer.jpg",
     link: "https://www.youtube.com/results?search_query=ok+boomer",
     description: "Phrase dismissing outdated opinions."
@@ -185,8 +170,7 @@ export const memes = [
     year: 2020,
     platform: "TikTok",
     type: "Music Meme",
-    category: "Dark Humor",
-    popularity: 94,
+    category: "Humor",
     image: "https://upload.wikimedia.org/wikipedia/en/3/3f/Coffin_Dance_meme.jpg",
     link: "https://www.youtube.com/results?search_query=coffin+dance",
     description: "Dancing pallbearers meme."
@@ -197,8 +181,7 @@ export const memes = [
     year: 2021,
     platform: "Twitter",
     type: "Image Meme",
-    category: "Politics",
-    popularity: 87,
+    category: "Social",
     image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Bernie_Sanders_mittens.jpg",
     link: "https://knowyourmeme.com/memes/bernie-sanders-mittens",
     description: "Bernie sitting with mittens at inauguration."
@@ -209,8 +192,7 @@ export const memes = [
     year: 2023,
     platform: "TikTok",
     type: "Trend",
-    category: "Streaming",
-    popularity: 80,
+    category: "Social",
     image: "https://upload.wikimedia.org/wikipedia/commons/6/69/TikTok_logo.svg",
     link: "https://www.youtube.com/results?search_query=npc+stream+tiktok",
     description: "Creators acting like NPC characters on livestream."
@@ -221,8 +203,7 @@ export const memes = [
     year: 2023,
     platform: "YouTube",
     type: "Animation Meme",
-    category: "Absurd",
-    popularity: 85,
+    category: "Humor",
     image: "https://upload.wikimedia.org/wikipedia/en/5/5c/Skibidi_Toilet.jpg",
     link: "https://www.youtube.com/results?search_query=skibidi+toilet",
     description: "Absurd animated series that went viral."
@@ -233,8 +214,7 @@ export const memes = [
     year: 2023,
     platform: "TikTok",
     type: "Reaction Meme",
-    category: "Expression",
-    popularity: 83,
+    category: "Humor",
     image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Side_eye_expression.jpg",
     link: "https://www.youtube.com/results?search_query=side+eye+meme",
     description: "Expressing suspicion or judgment with a glance."
