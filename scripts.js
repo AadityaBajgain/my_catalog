@@ -147,6 +147,16 @@ if(reset){
     resetFilter()
   })
 }
-
+// when add course button is clicked it will hide that button and then makes the hidden input form visible
+const addCourse = document.getElementById("addButton")
+if(addCourse){
+  addCourse.addEventListener("click",()=>{
+    const inputForm = document.getElementById("inputForm")
+    if(inputForm){
+      inputForm.hidden = false
+      addButton.hidden = true
+    }
+  })
+}
 // its main work is the render all the data at the booting of the site (when all the filters are default and none events are triggered)
 renderCourseCard(courses);
