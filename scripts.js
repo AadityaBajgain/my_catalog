@@ -59,14 +59,14 @@ function renderMemeCard(items){
 
   // this allows the lives search 
   if (searchInput) {
-    const query = searchInput.value.trim().toLowerCase();
+    const word = searchInput.value.trim().toLowerCase();
     filteredItems = filteredItems.filter((meme) => {
       return (
-        meme.name.toLowerCase().includes(query) ||
-        meme.type.toLowerCase().includes(query) ||
-        meme.platform.toLowerCase().includes(query) ||
-        meme.category.toLowerCase().includes(query) ||
-        meme.description.toLowerCase().includes(query)
+        meme.name.toLowerCase().includes(word) ||
+        meme.type.toLowerCase().includes(word) ||
+        meme.platform.toLowerCase().includes(word) ||
+        meme.category.toLowerCase().includes(word) ||
+        meme.description.toLowerCase().includes(word)
       )
     })  
   }
@@ -122,6 +122,31 @@ if (searchInput) {
 const sortByDate = document.getElementById("sortBy")
 if(sortByDate){
   sortByDate.addEventListener("change",()=>renderMemeCard(memes))
+}
+
+
+
+function resetFilter(){
+  const search = document.getElementById("searchInput")
+  const platform = document.getElementById("platformFilter")
+  const category = document.getElementById("categoryFilter")
+  const sortFilter = document.getElementById("sortBy")
+
+
+  search.value = ""
+  platform.value = "all"
+  category.value = "all"
+  sortFilter.value = "Default"
+
+  renderMemeCard(memes)
+}
+
+
+const reset = document.getElementById("clearFilters")
+if(reset){
+  reset.addEventListener("click",()=>{
+    resetFilter()
+  })
 }
 
 renderMemeCard(memes);
