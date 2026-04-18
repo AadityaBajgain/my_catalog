@@ -1,12 +1,9 @@
+
+// importing memes array from the data.js folder
 import {memes} from "./data.js"
 
-console.log(memes[0]);
 
-
-// document.getElementById("clearFilters").addEventListener("click",()=>location.reload())
-
-
-// create a card 
+// this creates the layout of the card and returns it
 function createCard(meme){
   const card = document.createElement("article")
   card.className = "card";
@@ -21,11 +18,11 @@ function createCard(meme){
 
   const title = document.createElement("h3");
   title.className = "cardTitle"
-  title.textContent = meme.name
+  title.textContent = meme.title
 
   const info = document.createElement("p");
   info.className = "info"
-  info.textContent = `${meme.year} | ${meme.platform} | ${meme.category}`;
+  info.textContent = `${meme.duration} hrs | ${meme.platform} | ${meme.category}`;
 
   const desc = document.createElement('p');
   desc.className = "desc";
@@ -34,7 +31,7 @@ function createCard(meme){
   const liveLink = document.createElement("a");  
   liveLink.href = meme.link
   liveLink.target = "_blank"
-  liveLink.textContent = "Open Source Link"
+  liveLink.textContent = "let's Learn ->"
 
 
   body.append(title, info, desc, liveLink)
@@ -62,11 +59,11 @@ function renderMemeCard(items){
     const word = searchInput.value.trim().toLowerCase();
     filteredItems = filteredItems.filter((meme) => {
       return (
-        meme.name.toLowerCase().includes(word) ||
-        meme.type.toLowerCase().includes(word) ||
+        meme.title.toLowerCase().includes(word) ||
         meme.platform.toLowerCase().includes(word) ||
         meme.category.toLowerCase().includes(word) ||
-        meme.description.toLowerCase().includes(word)
+        meme.description.toLowerCase().includes(word) ||
+        String(meme.duration).includes(word)
       )
     })  
   }
@@ -83,14 +80,14 @@ function renderMemeCard(items){
   grid.innerHTML = "";
 
   if(sortBy && sortBy.value !== "Default"){
-    if(sortBy.value === "year-asc"){
-      filteredItems.sort((a,b)=>a.year-b.year);
+    if(sortBy.value === "duration-asc"){
+      filteredItems.sort((a,b)=>a.duration-b.duration);
     }
-    else if(sortBy.value === "year-desc"){
-      filteredItems.sort((a,b)=>b.year-a.year)
+    else if(sortBy.value === "duration-desc"){
+      filteredItems.sort((a,b)=>b.duration-a.duration)
     }
     else{
-      filteredItems.sort((a,b)=>a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+      filteredItems.sort((a,b)=>a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
     }
   }
   // this will add the items that is left after the filter process
@@ -100,10 +97,27 @@ function renderMemeCard(items){
 
   // this will give the count of the items left after the filter
   if(resultCount){
-    resultCount.textContent = `${filteredItems.length} no of memes`
+    resultCount.textContent = `${filteredItems.length} courses found`
   }
 }
 
+// clears the filter, set the filters to default and rerenders 
+function resetFilter(){
+  const search = document.getElementById("searchInput")
+  const platform = document.getElementById("platformFilter")
+  const category = document.getElementById("categoryFilter")
+  const sortFilter = document.getElementById("sortBy")
+
+  // setting the value to defaults
+  search.value = ""
+  platform.value = "all"
+  category.value = "all"
+  sortFilter.value = "Default"
+
+  renderMemeCard(memes)
+}
+
+// based on the different event ( change in the filter options or change in input fields), the data will change and displayed
 const categoryFilter = document.getElementById("categoryFilter")
 if (categoryFilter) {
   categoryFilter.addEventListener("change", () => renderMemeCard(memes))
@@ -126,22 +140,7 @@ if(sortByDate){
 
 
 
-function resetFilter(){
-  const search = document.getElementById("searchInput")
-  const platform = document.getElementById("platformFilter")
-  const category = document.getElementById("categoryFilter")
-  const sortFilter = document.getElementById("sortBy")
-
-
-  search.value = ""
-  platform.value = "all"
-  category.value = "all"
-  sortFilter.value = "Default"
-
-  renderMemeCard(memes)
-}
-
-
+// if reset button is clicked this will call the reset function
 const reset = document.getElementById("clearFilters")
 if(reset){
   reset.addEventListener("click",()=>{
@@ -149,4 +148,5 @@ if(reset){
   })
 }
 
+// its main work is the render all the data at the booting of the site (when all the filters are default and none events are triggered)
 renderMemeCard(memes);

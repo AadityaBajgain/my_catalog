@@ -1,134 +1,231 @@
 export const memes = [
   {
-    id: 1,
-    name: "Doorbell Chud / Jason Thomas Nichols",
-    year: 2026,
-    platform: "TikTok",
-    type: "Reaction Meme",
-    category: "Humor",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/003/247/281/72c.jpg",
-    link: "https://knowyourmeme.com/memes/doorbell-chud-jason-thomas-nichols",
-    description: "Viral ring-camera break-in clip that quickly turned into redraws and edits."
+    title: "HTML & CSS Full Course",
+    description: "Learn how to build websites using HTML and CSS from scratch.",
+    duration: 6,
+    platform: "YouTube",
+    category: "Web Development",
+    image: "https://img.youtube.com/vi/mU6anWqZJcc/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=mU6anWqZJcc"
   },
   {
-    id: 2,
-    name: "Sabrina Carpenter Yodeling Reaction",
-    year: 2026,
-    platform: "TikTok",
-    type: "Reaction Image",
-    category: "Humor",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/003/247/726/2b2.jpg",
-    link: "https://knowyourmeme.com/memes/sabrina-carpenter-yodeling-zaghrouta-reaction",
-    description: "Sabrina's confused Coachella face became a high-usage reaction format."
+    title: "JavaScript Full Course",
+    description: "Complete JavaScript course covering fundamentals and projects.",
+    duration: 10,
+    platform: "YouTube",
+    category: "Web Development",
+    image: "https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=PkZNo7MFNFg"
   },
   {
-    id: 3,
-    name: "TNTD / Total Neurotypical Death",
-    year: 2026,
-    platform: "TikTok",
-    type: "Slang Meme",
-    category: "Social",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/003/248/400/3fe.jpeg",
-    link: "https://knowyourmeme.com/memes/tntd-total-neurotypical-death",
-    description: "A controversial acronym trend that spread widely across short-form videos."
+    title: "React JS Crash Course",
+    description: "Learn React basics including components, props, and hooks.",
+    duration: 4,
+    platform: "YouTube",
+    category: "Web Development",
+    image: "https://img.youtube.com/vi/w7ejDZ8SWv8/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=w7ejDZ8SWv8"
   },
   {
-    id: 4,
-    name: "Jessica Trend",
-    year: 2026,
-    platform: "TikTok",
-    type: "Participatory Trend",
-    category: "Social",
-    image: "https://i.kym-cdn.com/entries/icons/facebook/000/056/672/jesscover1.jpg",
-    link: "https://knowyourmeme.com/memes/jessica-trend",
-    description: "Parents testing the viral 'say Jessica' trick to stop toddler tantrums."
+    title: "Node.js Crash Course",
+    description: "Backend development using Node.js and Express.",
+    duration: 3,
+    platform: "YouTube",
+    category: "Web Development",
+    image: "https://img.youtube.com/vi/fBNz5xF-Kx4/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
   },
   {
-    id: 5,
-    name: "You Ain't Nothin' But A Hound Dog Remix",
-    year: 2026,
-    platform: "TikTok",
-    type: "Audio Meme",
-    category: "Dance",
-    image: "https://i.kym-cdn.com/entries/icons/facebook/000/056/656/Screenshot_2026-04-13_124008.jpg",
-    link: "https://knowyourmeme.com/memes/you-aint-nothin-but-a-hound-dog-hound-dog-house-remix",
-    description: "Brainrot-style edits built around a house remix of Elvis's 'Hound Dog.'"
+    title: "Frontend Development Full Course",
+    description: "Complete frontend roadmap including HTML, CSS, JS, and frameworks.",
+    duration: 8,
+    platform: "YouTube",
+    category: "Web Development",
+    image: "https://img.youtube.com/vi/zJSY8tbf_ys/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=zJSY8tbf_ys"
+  },
+
+  {
+    title: "Machine Learning by Andrew Ng",
+    description: "Covers supervised learning, neural networks, and ML strategies.",
+    duration: 55,
+    platform: "Coursera",
+    category: "Machine Learning",
+    image: "https://img.youtube.com/vi/IpGxLWOIZy4/maxresdefault.jpg",
+    link: "https://www.coursera.org/learn/machine-learning"
   },
   {
-    id: 6,
-    name: "Heart Butt Challenge",
-    year: 2026,
-    platform: "Instagram",
-    type: "Pose Challenge",
-    category: "Social",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/003/244/748/546.jpg",
-    link: "https://knowyourmeme.com/memes/heart-butt-challenge",
-    description: "A fast-spreading pose challenge that expanded into redraw and fandom posts."
+    title: "Machine Learning Full Course",
+    description: "Learn ML algorithms like regression, classification, clustering.",
+    duration: 12,
+    platform: "YouTube",
+    category: "Machine Learning",
+    image: "https://img.youtube.com/vi/GwIo3gDZCVQ/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=GwIo3gDZCVQ"
   },
   {
-    id: 7,
-    name: "365 Buttons",
-    year: 2025,
-    platform: "TikTok",
-    type: "Comment Meme",
-    category: "Social",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/003/197/265/dee.jpeg",
-    link: "https://knowyourmeme.com/memes/365-buttons",
-    description: "Tamara's cryptic '365 buttons' comment chain became a meme across platforms."
+    title: "TensorFlow for Beginners",
+    description: "Build and train ML models using TensorFlow.",
+    duration: 15,
+    platform: "YouTube",
+    category: "Machine Learning",
+    image: "https://img.youtube.com/vi/tPYj3fFJGjk/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=tPYj3fFJGjk"
   },
   {
-    id: 8,
-    name: "2016 Trend / 2026 Is the New 2016",
-    year: 2026,
-    platform: "Instagram",
-    type: "Nostalgia Trend",
-    category: "Social",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/003/202/262/81d.jpeg",
-    link: "https://knowyourmeme.com/memes/2016-trend-2026-is-the-new-2016",
-    description: "Users compare 2016 vs 2026 and revive old-era meme aesthetics."
+    title: "Intro to Machine Learning",
+    description: "Learn ML fundamentals with real-world examples.",
+    duration: 30,
+    platform: "Udacity",
+    category: "Machine Learning",
+    image: "https://img.youtube.com/vi/ukzFI9rgwfU/maxresdefault.jpg",
+    link: "https://www.udacity.com/course/intro-to-machine-learning--ud120"
   },
   {
-    id: 9,
-    name: "The Great Meme Reset of 2026",
-    year: 2026,
-    platform: "Reddit",
-    type: "Meta Meme",
-    category: "Humor",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/003/156/146/064.png",
-    link: "https://knowyourmeme.com/memes/the-great-meme-reset-of-2026",
-    description: "A movement calling for internet culture to return to older meme formats."
+    title: "Scikit-Learn Crash Course",
+    description: "Learn ML using Scikit-learn in Python.",
+    duration: 6,
+    platform: "YouTube",
+    category: "Machine Learning",
+    image: "https://img.youtube.com/vi/0Lt9w-BxKFQ/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=0Lt9w-BxKFQ"
+  },
+
+  {
+    title: "Intro to Artificial Intelligence",
+    description: "Fundamentals of AI including search, planning, and reasoning.",
+    duration: 40,
+    platform: "Udacity",
+    category: "AI",
+    image: "https://img.youtube.com/vi/JMUxmLyrhSk/maxresdefault.jpg",
+    link: "https://www.udacity.com/course/intro-to-artificial-intelligence--cs271"
   },
   {
-    id: 10,
-    name: "Thank You... Chainsaw Man",
-    year: 2026,
-    platform: "X",
-    type: "Redraw Meme",
-    category: "Humor",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/003/238/193/c47.jpg",
-    link: "https://knowyourmeme.com/memes/thank-you-chainsaw-man",
-    description: "A manga panel redraw format that won Know Your Meme's March 2026 poll."
+    title: "AI Full Course",
+    description: "Comprehensive AI course including neural networks and NLP.",
+    duration: 10,
+    platform: "YouTube",
+    category: "AI",
+    image: "https://img.youtube.com/vi/2ePf9rue1Ao/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=2ePf9rue1Ao"
   },
   {
-    id: 11,
-    name: "RIPBOZO",
-    year: 2021,
-    platform: "X",
-    type: "Catchphrase Meme",
-    category: "Humor",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/002/080/408/3cb.jpg",
-    link: "https://knowyourmeme.com/memes/ripbozo",
-    description: "A long-running phrase and reaction format that still resurfaces in trend cycles."
+    title: "Deep Learning Basics",
+    description: "Introduction to neural networks and deep learning.",
+    duration: 5,
+    platform: "YouTube",
+    category: "AI",
+    image: "https://img.youtube.com/vi/aircAruvnKk/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=aircAruvnKk"
   },
   {
-    id: 12,
-    name: "Uohhhhhhhhh!",
-    year: 2023,
-    platform: "Facebook",
-    type: "Reaction Meme",
-    category: "Humor",
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/002/655/500/91c.png",
-    link: "https://knowyourmeme.com/memes/uohhhhhhhhh-%F0%9F%98%AD",
-    description: "A reaction format that continues to pop up in current meme feeds."
+    title: "Neural Networks Explained",
+    description: "Understand how neural networks work visually.",
+    duration: 4,
+    platform: "YouTube",
+    category: "AI",
+    image: "https://img.youtube.com/vi/Ilg3gGewQ5U/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=Ilg3gGewQ5U"
+  },
+  {
+    title: "NLP Full Course",
+    description: "Learn Natural Language Processing techniques.",
+    duration: 8,
+    platform: "YouTube",
+    category: "AI",
+    image: "https://img.youtube.com/vi/CMrHM8a3hqw/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=CMrHM8a3hqw"
+  },
+
+  {
+    title: "Data Science Full Course",
+    description: "Covers Python, Pandas, visualization, and ML basics.",
+    duration: 10,
+    platform: "YouTube",
+    category: "Data Science",
+    image: "https://img.youtube.com/vi/ua-CiDNNj30/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=ua-CiDNNj30"
+  },
+  {
+    title: "Python for Data Science",
+    description: "Learn data analysis using Python libraries.",
+    duration: 12,
+    platform: "YouTube",
+    category: "Data Science",
+    image: "https://img.youtube.com/vi/r-uOLxNrNk8/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=r-uOLxNrNk8"
+  },
+  {
+    title: "SQL Full Course",
+    description: "Learn SQL for data querying and analysis.",
+    duration: 4,
+    platform: "YouTube",
+    category: "Data Science",
+    image: "https://img.youtube.com/vi/HXV3zeQKqGY/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+  },
+  {
+    title: "Data Analysis with Python",
+    description: "Analyze datasets using Pandas and NumPy.",
+    duration: 6,
+    platform: "YouTube",
+    category: "Data Science",
+    image: "https://img.youtube.com/vi/GPVsHOlRBBI/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=GPVsHOlRBBI"
+  },
+  {
+    title: "Intro to Data Analysis",
+    description: "Learn data analysis workflow and techniques.",
+    duration: 25,
+    platform: "Udacity",
+    category: "Data Science",
+    image: "https://img.youtube.com/vi/ua-CiDNNj30/maxresdefault.jpg",
+    link: "https://www.udacity.com/course/intro-to-data-analysis--ud170"
+  },
+
+  {
+    title: "Cyber Security Full Course",
+    description: "Learn basics of cybersecurity and ethical hacking.",
+    duration: 10,
+    platform: "YouTube",
+    category: "Cyber Security",
+    image: "https://img.youtube.com/vi/U_P23SqJaDc/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=U_P23SqJaDc"
+  },
+  {
+    title: "Ethical Hacking Course",
+    description: "Learn penetration testing and ethical hacking basics.",
+    duration: 12,
+    platform: "YouTube",
+    category: "Cyber Security",
+    image: "https://img.youtube.com/vi/3Kq1MIfTWCE/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=3Kq1MIfTWCE"
+  },
+  {
+    title: "Network Security Basics",
+    description: "Understand network protocols and security threats.",
+    duration: 6,
+    platform: "YouTube",
+    category: "Cyber Security",
+    image: "https://img.youtube.com/vi/inWWhr5tnEA/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=inWWhr5tnEA"
+  },
+  {
+    title: "Cybersecurity for Beginners",
+    description: "Beginner guide to cybersecurity concepts and tools.",
+    duration: 5,
+    platform: "YouTube",
+    category: "Cyber Security",
+    image: "https://img.youtube.com/vi/1v0l3tXnGdA/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=1v0l3tXnGdA"
+  },
+  {
+    title: "Linux Security Basics",
+    description: "Secure Linux systems and understand permissions.",
+    duration: 4,
+    platform: "YouTube",
+    category: "Cyber Security",
+    image: "https://img.youtube.com/vi/oxuRxtrO2Ag/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=oxuRxtrO2Ag"
   }
-];
+]

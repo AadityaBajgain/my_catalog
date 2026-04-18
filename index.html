@@ -1,75 +1,91 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Viral Moments Catalog</title>
-    <meta
-      name="description"
-      content="A searchable catalog of viral internet moments and memes."
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src="scripts.js"></script>
-  </head>
-  <body>
-    <header class="page-header">
-      <p class="eyebrow">Internet Culture Archive</p>
-      <h1>Viral Moments And Memes Catalog</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viral Moments Catalog</title>
+  <meta name="description" content="A searchable catalog of viral internet moments and memes." />
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="scripts.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Internet Archive for CS Students</p>
+      <h1>Learn Everything For Free</h1>
       <p class="subtitle">
-        Explore iconic challenges, formats, phrases, and trends across
-        platforms.
+        Explore free courses to learn from free
       </p>
-    </header>
+    </div>
+    <div class="addCourse">
+      <span>
+      Help contributing the community
+    </span>
+    <button class="addButton">
+      Add Course
+    </button>
+    </div>
+    
 
-    <main class="layout">
+
+  </header>
+
+  <main>
+    <h2>
+      Catalog of Free Courses
+    </h2>
+    <div class="layout">
       <aside class="controls">
-        <h2>Browse</h2>
+      <h2>Browse</h2>
 
-        <label for="searchInput">Search</label>
-        <input
-          id="searchInput"
-          type="text"
-          placeholder="Name, type, platform..."
-          autocomplete="off"
-        />
+      <label for="searchInput">Search</label>
+      <input id="searchInput" type="text" placeholder="Name, type, platform..." autocomplete="off" />
 
-        <label for="platformFilter">Platform</label>
-        <select id="platformFilter">
-          <option value="all">All platforms</option>
-          <option value="Facebook">Facebook</option>
-          <option value="Instagram">Instagram</option>
-          <option value="Reddit">Reddit</option>
-          <option value="X">X</option>
-        </select>
+      <label for="platformFilter">Platform</label>
+      <select id="platformFilter">
+        <option value="all">All platforms</option>
+        <option value="YouTube">YouTube</option>
+        <option value="Coursera">Coursera</option>
+        <option value="Udacity">Udacity</option>
+      </select>
 
-        <label for="categoryFilter">Category</label>
-        <select id="categoryFilter">
-          <option value="all">All categories</option>
-          <option value="Humor">Humor</option>
-          <option value="Dance">Dance</option>
-          <option value="Social">Social</option>
-          <option value="Gaming">Gaming</option>
-        </select>
+      <label for="categoryFilter">Category</label>
+      <select id="categoryFilter">
+        <option value="all">All categories</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Machine Learning">Machine Learning</option>
+        <option value="AI">AI</option>
+        <option value="Data Science">Data Science</option>
+        <option value="Cyber Security">Cyber Security</option>
+      </select>
 
-        <label for="sortBy">Sort By</label>
-        <select id="sortBy">
-          <option value="Default">Default</option>
-          <option value="year-desc">Year (Newest First)</option>
-          <option value="year-asc">Year (Oldest First)</option>
-          <option value="name-asc">Name (A-Z)</option>
-        </select>
+      <label for="sortBy">Sort By</label>
+      <select id="sortBy">
+        <option value="Default">Default</option>
+        <option value="duration-desc">Duration (Longest First)</option>
+        <option value="duration-asc">Duration (Shortest First)</option>
+        <option value="title-asc">Title (A-Z)</option>
+      </select>
 
-      
 
-        <button id="clearFilters" type="button">Clear Filters</button>
-      </aside>
 
-      <section class="results">
-        <div class="results-head">
-          <p id="resultCount" aria-live="polite"></p>
-        </div>
-        <div id="catalogGrid" class="catalog-grid" aria-live="polite"></div>
-      </section>
-    </main>
-  </body>
+      <button id="clearFilters" type="button">Clear Filters</button>
+    </aside>
+
+    <section class="results">
+      <div class="results-head">
+        <p id="resultCount" aria-live="polite"></p>
+      </div>
+      <div id="catalogGrid" class="catalog-grid" aria-live="polite"></div>
+    </section>
+    </div>
+    
+  </main>
+</body>
+<footer class="foot">
+  <p id="footerInfo">Made by one CS fellow for the community.</p>
+</footer>
+
 </html>
