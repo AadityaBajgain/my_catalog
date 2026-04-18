@@ -1,4 +1,4 @@
-export const memes = [
+export const courses = [
   {
     title: "HTML & CSS Full Course",
     description: "Learn how to build websites using HTML and CSS from scratch.",
