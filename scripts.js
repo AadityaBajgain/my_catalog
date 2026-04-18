@@ -1,5 +1,4 @@
-
-// importing courses array from the data.js folder
+// importing courses array from the data.js file
 import {courses} from "./data.js"
 
 
@@ -40,7 +39,7 @@ function createCard(course){
 
 }
 
-// renders cards
+// uses the above card layout and renders cards
 function renderCourseCard(items){
   const grid = document.querySelector(".catalog-grid")
   const resultCount = document.getElementById("resultCount")
