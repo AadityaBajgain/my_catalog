@@ -13,7 +13,8 @@
 }
 
 body {
-	margin: 0;
+  max-width: 1200px;
+	margin: 0 auto;
 	font-family: "Google Sans", sans-serif;
 	color: var(--text);
 	background: var(--bg);
@@ -21,28 +22,41 @@ body {
 }
 
 .page-header {
-	padding: 2rem 1.25rem 1.25rem;
-	border-bottom: 1px solid var(--border);
-	background: var(--surface);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    margin: 1rem auto 0;
+    padding: 1.5rem 1.25rem;
 }
 
 main h2{
   text-align: center;
 }
+.addCourse{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;  
+}
 .addCourse button{
   background-color: rgb(123, 195, 123);
   color: white;
   width: fit-content;
-  
+  margin-top: 5px;
 }
 .addCourse button:hover{
   background-color: rgb(150, 191, 150);
   cursor: pointer;
 }
 
+.inputForm{
+  background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	padding: 1rem;
+}
+
+.inputForm button{
+  width: 100%;
+}
 
 .eyebrow {
 	margin: 0;
@@ -63,18 +77,20 @@ main h2{
 }
 
 .layout {
-	max-width: 1200px;
-	margin: 0 auto;
 	padding: 1.25rem;
 	display: flex;
 	gap: 1.25rem;
 }
-
-.controls {
-  width: 30%;
-	position: sticky;
+aside{
+  position: inherit;
 	top: 1rem;
 	align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 30%;
+}
+.controls{
 	background: var(--surface);
 	border: 1px solid var(--border);
 	border-radius: 12px;

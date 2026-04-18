@@ -19,17 +19,6 @@
         Explore courses to learn from free
       </p>
     </div>
-    <div class="addCourse">
-      <span>
-      Contribute to the community
-    </span>
-    <button class="addButton">
-      Add Free Course
-    </button>
-    </div>
-    
-
-
   </header>
 
   <main>
@@ -37,51 +26,79 @@
       Catalog of Free Courses
     </h2>
     <div class="layout">
-      <aside class="controls">
-      <h2>Browse</h2>
+      <aside>
+        <div class="controls">
+          <h2>Browse</h2>
 
-      <label for="searchInput">Search</label>
-      <input id="searchInput" type="text" placeholder="Name, type, platform..." autocomplete="off" />
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="text" placeholder="Name, type, platform..." autocomplete="off" />
 
-      <label for="platformFilter">Platform</label>
-      <select id="platformFilter">
-        <option value="all">All platforms</option>
-        <option value="YouTube">YouTube</option>
-        <option value="Coursera">Coursera</option>
-        <option value="Udacity">Udacity</option>
-      </select>
+          <label for="platformFilter">Platform</label>
+          <select id="platformFilter">
+            <option value="all">All platforms</option>
+            <option value="YouTube">YouTube</option>
+            <option value="Coursera">Coursera</option>
+            <option value="Udacity">Udacity</option>
+          </select>
 
-      <label for="categoryFilter">Category</label>
-      <select id="categoryFilter">
-        <option value="all">All categories</option>
-        <option value="Web Development">Web Development</option>
-        <option value="Machine Learning">Machine Learning</option>
-        <option value="AI">AI</option>
-        <option value="Data Science">Data Science</option>
-        <option value="Cyber Security">Cyber Security</option>
-      </select>
+          <label for="categoryFilter">Category</label>
+          <select id="categoryFilter">
+            <option value="all">All categories</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="AI">AI</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Cyber Security">Cyber Security</option>
+          </select>
 
-      <label for="sortBy">Sort By</label>
-      <select id="sortBy">
-        <option value="Default">Default</option>
-        <option value="duration-desc">Duration (Longest First)</option>
-        <option value="duration-asc">Duration (Shortest First)</option>
-        <option value="title-asc">Title (A-Z)</option>
-      </select>
+          <label for="sortBy">Sort By</label>
+          <select id="sortBy">
+            <option value="Default">Default</option>
+            <option value="duration-desc">Duration (Longest First)</option>
+            <option value="duration-asc">Duration (Shortest First)</option>
+            <option value="title-asc">Title (A-Z)</option>
+          </select>
 
 
 
-      <button id="clearFilters" type="button">Clear Filters</button>
-    </aside>
+          <button id="clearFilters" type="button">Clear Filters</button>
+        </div>
+        <div class="addCourse">
+          <span>
+            Contribute to the community
+          </span>
+          <button class="addButton">
+            Add Free Course
+          </button>
+          <form class="inputForm" hidden>
+          <label for="inputTitle">Title of free Course</label>
+          <input type="text" name="inputTitle" id="inputTitle" placeholder="Eg. Web development for beginners...">
+          <label for="inputPlatform">Platform</label>
+          <input type="text" name="" id="inputTitle" placeholder="Eg. Youtube">
+          <label for="inputCategpry">Category</label>
+          <input type="text" id="inputCategory" placeholder="Eg. Web Development, AI, Machine learning, Data Science, Security">
+          <label for="inputDuration">Duration in Hours</label>
+          <input type="number" name="inputDuration" id="inputDuration" placeholder="Eg. 10 hr">
+          <label for="inputDescripton">Description of Course</label>
+          <input type="text" id="inputDescription" placeholder="Eg. This is the beginner friendly web development course...">
+          <label for="inputThumbnail">Course Thumbnail Link (Optional)</label>
+          <input type="text" name="inputThumbnail" id="inputThoumbnail">
+          <label for="inputLink">Link to the Course</label>
+          <input type="text" id="inputLink">
+          <button type="submit">Submit</button>
+        </form>
+        </div>
+        
+      </aside>
 
-    <section class="results">
-      <div class="results-head">
-        <p id="resultCount" aria-live="polite"></p>
-      </div>
-      <div id="catalogGrid" class="catalog-grid" aria-live="polite"></div>
-    </section>
+      <section class="results">
+        <div class="results-head">
+          <p id="resultCount"></p>
+        </div>
+        <div id="catalogGrid" class="catalog-grid"></div>
+      </section>
     </div>
-    
+
   </main>
 </body>
 <footer class="foot">
