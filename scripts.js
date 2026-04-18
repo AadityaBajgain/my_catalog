@@ -3,6 +3,7 @@ import {memes} from "./data.js"
 console.log(memes[0]);
 
 
+// document.getElementById("clearFilters").addEventListener("click",()=>location.reload())
 
 
 // create a card 
@@ -43,23 +44,84 @@ function createCard(meme){
 
 }
 
-
+// renders cards
 function renderMemeCard(items){
   const grid = document.querySelector(".catalog-grid")
   const resultCount = document.getElementById("resultCount")
-  
-  
+  const categoryFilter = document.getElementById("categoryFilter")
+  const platformFilter = document.getElementById("platformFilter")
+  const searchInput = document.getElementById("searchInput")
+  const sortBy = document.getElementById("sortBy")
   if(!grid) return;
 
+  let filteredItems = items;
+
+
+  // this allows the lives search 
+  if (searchInput) {
+    const query = searchInput.value.trim().toLowerCase();
+    filteredItems = filteredItems.filter((meme) => {
+      return (
+        meme.name.toLowerCase().includes(query) ||
+        meme.type.toLowerCase().includes(query) ||
+        meme.platform.toLowerCase().includes(query) ||
+        meme.category.toLowerCase().includes(query) ||
+        meme.description.toLowerCase().includes(query)
+      )
+    })  
+  }
+
+  // if specific category is selected this will change the content based on the category
+  if (categoryFilter && categoryFilter.value !== "all") {
+    filteredItems = filteredItems.filter((meme) => meme.category === categoryFilter.value)
+  }
+
+  // if any platform is selected this will change the items based on the selected platform
+  if(platformFilter && platformFilter.value !== "all"){
+    filteredItems = filteredItems.filter((meme)=> meme.platform === platformFilter.value)
+  }
   grid.innerHTML = "";
 
-  items.map((meme, key=meme.id)=>{
+  if(sortBy && sortBy.value !== "Default"){
+    if(sortBy.value === "year-asc"){
+      filteredItems.sort((a,b)=>a.year-b.year);
+    }
+    else if(sortBy.value === "year-desc"){
+      filteredItems.sort((a,b)=>b.year-a.year)
+    }
+    else{
+      filteredItems.sort((a,b)=>a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+    }
+  }
+  // this will add the items that is left after the filter process
+  filteredItems.forEach((meme)=>{
     grid.appendChild(createCard(meme))
   })
 
+  // this will give the count of the items left after the filter
   if(resultCount){
-    resultCount.textContent = `${items.length} no of memes`
+    resultCount.textContent = `${filteredItems.length} no of memes`
   }
+}
+
+const categoryFilter = document.getElementById("categoryFilter")
+if (categoryFilter) {
+  categoryFilter.addEventListener("change", () => renderMemeCard(memes))
+}
+
+const platformFilter = document.getElementById("platformFilter");
+if(platformFilter){
+  platformFilter.addEventListener("change",()=>renderMemeCard(memes))
+}
+
+const searchInput = document.getElementById("searchInput")
+if (searchInput) {
+  searchInput.addEventListener("input", () => renderMemeCard(memes))
+}
+
+const sortByDate = document.getElementById("sortBy")
+if(sortByDate){
+  sortByDate.addEventListener("change",()=>renderMemeCard(memes))
 }
 
 renderMemeCard(memes);
