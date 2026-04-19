@@ -162,7 +162,7 @@ const onSubmit = document.getElementById("inputForm");
 if (onSubmit) {
   onSubmit.addEventListener("submit", (e) => {
     
-    e.preventDefault(); // this will prevent default behavior of form, i.e, when submitted it refresh the page
+    e.preventDefault(); // this will prevent default behavior of form, i.e, when submitted it reload the page
 
     const course = {
       title: document.getElementById("inputTitle")?.value,
@@ -178,7 +178,7 @@ if (onSubmit) {
 
     renderCourseCard(courses);
 
-    onSubmit.reset()
+    onSubmit.reset();
   });
 }
 

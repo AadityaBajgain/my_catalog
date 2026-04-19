@@ -81,6 +81,7 @@ main h2{
 	display: flex;
 	gap: 1.25rem;
 }
+
 aside{
   position: inherit;
 	top: 1rem;
@@ -218,10 +219,16 @@ button:focus {
 
 @media (max-width: 900px) {
 	.layout {
-		grid-template-columns: 1fr;
+		flex-direction: column;
+	}
+	aside {
+		width: 100%;
+		flex-direction: column;
+		gap: 0.5rem;
 	}
 
-	.controls {
-		position: static;
+	.controls,
+	.addCourse {
+		flex: 1 1 320px;
 	}
 }
