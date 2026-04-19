@@ -157,12 +157,14 @@ if (addCourse) {
 }
 
 
-// this adds the submitted course on the catalog ( but not permanently, is removed when rendered, because its not pushed on the courses array )
+// this adds the submitted course on the catalog ( but not permanently, is removed when rendered, because its not added on our static data array )
 const onSubmit = document.getElementById("inputForm");
 if (onSubmit) {
   onSubmit.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let course = {
+    
+    e.preventDefault(); // this will prevent default behavior of form, i.e, when submitted it refresh the page
+
+    const course = {
       title: document.getElementById("inputTitle")?.value,
       platform: document.getElementById("inputPlatform")?.value,
       category: document.getElementById("inputCategory")?.value,
